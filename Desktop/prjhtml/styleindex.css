@@ -34,3 +34,9 @@ h2 {
   margin: 0 auto; /* Center the table */
   width: 70%; /* Adjust the width as needed */
 }
+label{
+	color : red; 
+}
+button{
+	color : blue; 
+}

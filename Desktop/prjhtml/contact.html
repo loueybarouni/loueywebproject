@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<link rel="stylesheet" type="text/css" href="styleindex.css">
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Contact</title>
+    <title>BAROUNI Louey - Contact</title>
+    <link rel="stylesheet" type="text/css" href="styleindex.css">
 </head>
 <body>
     <header>
@@ -19,31 +19,55 @@
         </nav>
     </header>
 
-    <section class="header" >
-		<h4 style = "background-color : black ;" > _ </h4>
+    <section class="header">
+        <h4 style="background-color: black;"> _ </h4>
         <h2><center>Contact Information</center></h2>
-		<center><img src="C:\Users\USER\Desktop\prjhtml\pdp.jpg" alt="My Profile" width="300" height="300"> </center>
-		<h4 style = "background-color : black ;" > _ </h4>
+        <center><img src="C:\Users\USER\Desktop\prjhtml\pdp.jpg" alt="My Profile" width="300" height="300"></center>
+        <h4 style="background-color: black;"> _ </h4>
         <ul class="center-table">
-			<table>
-				<tr>
-					<td>
-						<h1>Contact me on :</h1>
-						<p>Email: Louey.barouni@esprit.tn</p>
-						<p>Phone: +21696507537</p>
-						<h1>Find me here :</h1>
-						<p>Address: Walegh, Djerba, Medenine, Tunisia</p>
-					</td>
-					<td>
-						<img src="C:\Users\USER\Desktop\prjhtml\localisation.png" alt="Localisation" width="250" height="250">
-					</td>
-				</tr>
-			</table>
-		</ul>
+            <table>
+                <tr>
+                    <td>
+                        <h1>Contact me on :</h1>
+                        <p>Email: Louey.barouni@esprit.tn</p>
+                        <p>Phone: +21696507537</p>
+                        <h1>Find me here :</h1>
+                        <p>Address: Walegh, Djerba, Medenine, Tunisia</p>
+                    </td>
+                    <td>
+                        <img src="C:\Users\USER\Desktop\prjhtml\localisation.png" alt="Localisation" width="250" height="250">
+                    </td>
+                </tr>
+            </table>
+        </ul>
+
+        <center>
+        <form id="contactForm">
+            <label for="cin">CIN :</label>
+            <input type="text" id="cin" name="cin" pattern="\d{8}" required>
+            <div id="errorCin" class="error"></div>
+            <br>
+
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" name="fullName" pattern="[a-zA-Z\s]+" required>
+            <div id="errorFullName" class="error"></div>
+            <br>
+
+            <label for="message">Your Message :</label>
+            <textarea id="message" name="message" rows="4" maxlength="150" oninput="updateCounter()" required></textarea>
+            <div id="errorMessages" class="error"></div>
+            <div id="messageCounter">150/150</div>
+            <br>
+
+            <button type="button" onclick="sendMessage()">Send Message</button>
+        </form>
+		</center>
     </section>
 
     <footer class="header">
         <p>&copy; 2023 BAROUNI Louey. All rights reserved.</p>
     </footer>
+
+    <script src="contact.js"></script>
 </body>
 </html>
